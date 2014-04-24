@@ -26,6 +26,13 @@
 	$(".apps li").click(function(){
 		$(".container").toggleClass("right");
 	});
+	$(".container").click(function(e){
+		if($(".container").position().left>0)
+			$(".container").toggleClass("left");
+		else if($(".container").position().left<0)
+				$(".container").toggleClass("right");
+		
+	});
 	
 	updateTimeString();
 	setInterval(updateTimeString,1000);
