@@ -51,9 +51,9 @@
 
 	$(".container").click(function(e){
 		if($(".container").position().left>0)
-			$(".container").toggleClass("left");
+			$(".container").removeClass("left");
 		else if($(".container").position().left<0)
-				$(".container").toggleClass("right");
+				$(".container").removeClass("right");
 		
 	});
 	
