@@ -2,25 +2,26 @@ html,body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: sans-serif;
+  overflow: hidden;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
+.container {
+  position: relative;
   display: flex;
-  flex-direction: horizontal;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: sans-serif;
   background: url(../bg.jpg) no-repeat #2d2d2d;
   background-size: cover;
   color: white;
-}
-
-body.dark {
-  color: #2d2d2d;
+  height: 100%;
+  overflow-y: auto;
+  box-shadow: 0 0 10px black;
 }
 
 .center {
@@ -134,4 +135,30 @@ ul {
 
 .apps li ul li {
   font-size: .8em;
+}
+
+.container {
+  transition: 1s;
+}
+
+.left-container, .right-container {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  overflow-y: auto;
+  width: 20em;
+  background: #2d2d2d;
+  color: white;
+}
+
+.right-container {
+  right: 0;
+}
+
+.container.left {
+  -webkit-transform: translate(20em, 0);
+}
+
+.container.right {
+  -webkit-transform: translate(-20em, 0);
 }

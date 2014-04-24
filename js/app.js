@@ -19,6 +19,14 @@
 		$(".clock").text(hours+":"+minutes);
 	}
 
+	$(".toggle-apps").click(function(){
+		$(".container").toggleClass("left");
+	});
+
+	$(".apps li").click(function(){
+		$(".container").toggleClass("right");
+	});
+
 	updateTimeString();
 	setInterval(updateTimeString,1000);
 	updateDateString();
