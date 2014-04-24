@@ -1,0 +1,133 @@
+html,body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+  background: url(../bg.jpg) no-repeat #2d2d2d;
+  background-size: cover;
+  color: white;
+}
+
+body.dark {
+  color: #2d2d2d;
+}
+
+.center {
+  flex-grow: 2;
+}
+
+.clock {
+  text-align: center;
+  font-size: 10em;
+  padding: .1em;
+  text-shadow: 0 1px 2px #aaa;
+}
+
+.date {
+  font-size: 3em;
+  text-align: center;
+  margin-top: -.6em;
+  text-shadow: 0 1px 2px #aaa;
+}
+
+.calendar-tasks {
+  font-size: 1.5em;
+  margin-top: .5em;
+}
+
+.calendar-tasks li {
+  padding: .3em;
+  margin-bottom: .3em;
+  background: rgba(255,255,255,.9);
+  color: #2d2d2d;
+  border-radius: 3px;
+  box-shadow:0 1px 2px #aaa;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.calendar-tasks li:hover {
+  background: rgba(255,255,255,1);
+}
+
+.calendar-tasks i {
+  font-size: 1.3em;
+  vertical-align: middle;
+  width: 1em;
+  text-align: center;
+}
+
+.calendar-tasks span {
+  vertical-align: middle;
+  padding-left: .1em;
+  display: inline-block;
+}
+
+.calendar-tasks .new {
+  text-align: center;
+}
+
+.calendar-tasks .time {
+  opacity: .9;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.launcher {
+  flex-grow: 1;
+  font-size: 2em;
+  padding-left: .5em;
+}
+
+.launcher li, .apps li {
+  cursor: pointer;
+  margin-bottom: .5em;
+}
+
+.launcher span {
+  opacity: 0;
+  display: inline-block;
+  transition: .5s;
+  vertical-align: middle;
+}
+
+.launcher li:hover span {
+  opacity: 1;
+}
+
+.launcher i {
+  font-size: 2em;
+  color: rgba(255,255,255,.93);
+  vertical-align: middle;
+}
+
+.apps {
+  flex-grow: 1;
+  font-size: 2em;
+  padding-right: .5em;
+  text-align: right;
+}
+
+.apps > ul {
+  width: 80%;
+  margin-left: auto;
+}
+
+.apps li ul li {
+  font-size: .8em;
+}

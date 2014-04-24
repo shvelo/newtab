@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <head>
 <title>New Tab</title>
-<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
 <div class="launcher">
   <ul>
-    <li>Apps</li>
-    <li>Group</li>
+    <li><i class="fa fa-rocket"></i> <span>Apps</span></li>
+    <li><i class="fa fa-folder-o"></i> <span>Group</span></li>
   </ul>
 </div>
 
@@ -17,26 +18,31 @@
   <div class="date">12 Jan 2014</div>
   <div class="calendar-tasks">
     <ul>
-      <li>New note</li>
-      <li>Do stuff</li>
+      <li class="new"><i class="fa fa-plus"></i> <span>New task</span></li>
+      <li><i class="fa fa-calendar"></i> <span>Do stuff</span> <span class="time">11:00</span></li>
+      <li><i class="fa fa-calendar"></i> <span>Do more stuff</span> 
+        <span class="time">11:00</span></li>
+
+      <li><i class="fa fa-square-o"></i> <span>Task</span></li>
+      <li><i class="fa fa-square"></i> <span>Task done</span></li>
     </ul>
   </div>
 </div>
 
 <div class="apps">
   <ul>
-    <li><a>Notes</a>
+    <li><span>Notes</span> <i class="fa fa-edit"></i>
       <ul>
         <li>note 1</li>
         <li>note 2</li>
       </ul>
     </li>
-    <li><a>GitHub</a>
+    <li><a><span>GitHub</span> <i class="fa fa-github"></i></a>
       <ul>
         <li>repo 1</li>
       </ul>
     </li>
-    <li><a>Dribbble</a>
+    <li><span>Dribbble</span> <i class="fa fa-dribbble"></i>
       <ul>
         <li>shot 1</li>
       </ul>
