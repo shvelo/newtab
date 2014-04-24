@@ -11,7 +11,7 @@
    "manifest_version": 2,
    "name": "New Tab",
    "offline_enabled": true,
-   "permissions": [ "geolocation", "unlimitedStorage", "*://*.github.com/*" ],
+   "permissions": [ "geolocation", "unlimitedStorage", "*://*.github.com/*","storage"],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "0.27"
 }
