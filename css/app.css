@@ -116,6 +116,8 @@ ul {
 }
 
 .launcher i {
+  width: 1em;
+  text-align: center;
   font-size: 2em;
   color: rgba(255,255,255,.93);
   vertical-align: middle;
@@ -139,6 +141,7 @@ ul {
 
 .container {
   transition: 1s;
+  left: 0px;
 }
 
 .left-container, .right-container {
@@ -156,9 +159,9 @@ ul {
 }
 
 .container.left {
-  -webkit-transform: translate(20em, 0);
+  left: 20em;
 }
 
 .container.right {
-  -webkit-transform: translate(-20em, 0);
+  left: -20em;
 }

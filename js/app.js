@@ -26,7 +26,7 @@
 	$(".apps li").click(function(){
 		$(".container").toggleClass("right");
 	});
-
+	
 	updateTimeString();
 	setInterval(updateTimeString,1000);
 	updateDateString();
