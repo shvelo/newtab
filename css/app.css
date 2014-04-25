@@ -142,11 +142,12 @@ ul {
 .container {
   transition: 1s;
   left: 0px;
+  z-index: 2;
 }
 
 .left-container, .right-container {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   height: 100%;
   overflow-y: auto;
   width: 20em;
@@ -164,4 +165,31 @@ ul {
 
 .container.right {
   left: -20em;
+}
+
+.app-list li {
+  padding: .5em;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.app-list li:hover {
+  background: rgba(255,255,255,.1);
+}
+
+.app-list img {
+  width: 20%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.app-list span {
+  font-size: 1.7em;
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow : ellipsis;
+  white-space   : nowrap;
+  width         : 80%;
+  overflow      : hidden;
+  padding-left: .5em;
 }

@@ -39,6 +39,31 @@
 		})
 	}
 
+	var getApps = function() {
+		if(chrome && chrome.management) {
+			chrome.management.getAll(function(extensions) {
+				for(i in extensions) {
+					if(extensions[i].enabled && (extensions[i].type == "hosted_app" || 
+					extensions[i].type == "packaged_app" || extensions[i].type == "legacy_packaged_app")) {
+						var name = extensions[i].name;
+						var id = extensions[i].id;
+						var icon = extensions[i].icons[extensions[i].icons.length -1];
+
+						$(".app-list").append("<li data-id='"+id+"'><img src='"+icon.url+"'>"
+							+"<span>"+name+"</span></li>");
+					}
+				}
+			});
+			$(".app-list").on("click", "li", function(e) {
+				e.preventDefault();
+				var id = $(this).data("id");
+				chrome.management.launchApp(id);
+			});
+		}
+	}
+
+	getApps();
+
 	getTrending();
 
 	$(".toggle-apps").click(function(){
