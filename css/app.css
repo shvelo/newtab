@@ -28,6 +28,8 @@ html,body {
   flex-grow: 2;
   height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .clock {
@@ -37,6 +39,7 @@ html,body {
   text-shadow: 0 1px 2px #aaa;
   -webkit-user-select: none;
   cursor: default;
+  flex-grow: 1;
 }
 
 .date {
@@ -46,17 +49,14 @@ html,body {
   text-shadow: 0 1px 2px #aaa;
   -webkit-user-select: none;
   cursor: default;
+  flex-grow: 1;
 }
 
 .calendar-tasks {
   font-size: 1.5em;
   margin-top: .5em;
-  max-height: 50%;
+  flex-grow: 2;
   overflow: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .calendar-tasks::-webkit-scrollbar {
