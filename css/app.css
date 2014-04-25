@@ -193,3 +193,15 @@ ul {
   overflow      : hidden;
   padding-left: .5em;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: rgba(255,255,255,0.3); 
+}
