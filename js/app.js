@@ -44,9 +44,13 @@
 	$(".toggle-apps").click(function(){
 		$(".container").toggleClass("left");
 	});
-
 	$(".apps li").click(function(){
 		$(".container").toggleClass("right");
+	});
+	$("#add").click(function(){
+		var link="http://www.stackoverflow.com";
+		var imageLink="https://www.google.com/s2/favicons?domain="+ link;
+		$(".left-container").html("<img width='48' src='"+imageLink+"'>");
 	});
 
 	$(".container").click(function(e){
