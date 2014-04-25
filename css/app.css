@@ -26,6 +26,8 @@ html,body {
 
 .center {
   flex-grow: 2;
+  height: 100%;
+  position: relative;
 }
 
 .clock {
@@ -49,6 +51,16 @@ html,body {
 .calendar-tasks {
   font-size: 1.5em;
   margin-top: .5em;
+  max-height: 50%;
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.calendar-tasks::-webkit-scrollbar {
+  width: 0;
 }
 
 .calendar-tasks li {
