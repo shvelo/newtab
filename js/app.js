@@ -149,6 +149,20 @@
 		
 		console.log("added to bookmark");
 	});
+	$("#group").click(function(){
+		$(".container").toggleClass("left");
+		chrome.storage.sync.get("url", function(data) {
+			arr1=(data.url).split("|");
+		});
+		chrome.storage.sync.get("title", function(data) {
+			arr2=(data.title).split("|");
+		});
+		for(var i=0;i<arr1.length;i++){
+			$(".div to add shortcuts").append("<li data-id='"+arr2[i]+"'><img src='"+getFavicon(arr1[i])+"'>"
+							+"<a href='"+arr1[i]+"'target='_blank'>"+arr2[i]+"</a></li>");
+		}
+	});
+	
 	updateTimeString();
 	setInterval(updateTimeString,1000);
 	updateDateString();
