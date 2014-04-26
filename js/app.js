@@ -132,7 +132,23 @@
 		$(".left-tab").removeClass("active");
 		$(".tab-add").addClass("active");
 	});
-
+	$('#addBookmark').click(function(){
+		var url=($("#url").val());
+		var title=($("#title").val());
+		var arr1,arr2;
+		chrome.storage.sync.get("url", function(data) {
+			arr1=(data.url).split("|");
+			arr1.push(url);
+			chrome.storage.sync.set({"url": arr1.join("|")});
+		});
+		chrome.storage.sync.get("title", function(data) {
+			arr2=(data.title).split("|");
+			arr2.push(title);
+			chrome.storage.sync.set({"title": arr2.join("|")});
+		});
+		
+		console.log("added to bookmark");
+	});
 	updateTimeString();
 	setInterval(updateTimeString,1000);
 	updateDateString();
