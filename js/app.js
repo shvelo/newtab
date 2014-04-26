@@ -87,7 +87,21 @@
 			}
 		});
 	}
-	
+
+	var getDribbbleShots = function() {
+		$.ajax({
+			dataType: "jsonp",
+			url: "https://api.dribbble.com/shots/popular?per_page=5",
+			complete: function(result){
+				var shots = result.responseJSON.shots;
+				for(i in shots){
+					$(".dribbble-shots").append("<li>" + shots[i].title + "</li>");
+				}
+			}
+		});
+	}
+
+	getDribbbleShots();	
 
 	$(".container").click(function(e){
 		if($(".container").position().left>0)
