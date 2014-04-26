@@ -1,12 +1,10 @@
 if(chrome && chrome.storage && chrome.storage.sync) {
+	//chrome.storage.sync.set({name: value});
 
-  chrome.storage.sync.set({'value': "10"}, function() {
-    // Notify that we saved.
-    console.log('Settings saved');
+  /*
+  chrome.storage.sync.get(name, function(data) {
+    return (data);
   });
-
-  chrome.storage.sync.get("value", function(data) {
-    console.log(data);
-  });
+  */
 
 }

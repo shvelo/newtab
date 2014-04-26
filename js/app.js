@@ -78,6 +78,20 @@
 		var imageLink="http://fvicon.com/"+link+"?canAudit=false&format=png&filter=apple-touch-icon";
 		$(".left-container").html("<img width='48' src='"+imageLink+"'>");
 	});
+	
+		//get Gmail New Mail count//
+	/*
+	$.ajax({
+	url: "https://mail.google.com/mail/feed/atom",
+			dataType: "xml",
+			complete: function(data) {
+				var newMailCount=data.responseText.split("<fullcount>")[1].split("</fullcount>")[0];
+				console.log(newMailCount);
+				}
+		});
+	*/
+	// end of gmail new mail count//
+	
 
 	$(".container").click(function(e){
 		if($(".container").position().left>0)
