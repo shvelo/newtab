@@ -72,9 +72,10 @@
 	$(".apps li").click(function(){
 		$(".container").toggleClass("right");
 	});
+
 	$("#add").click(function(){
 		var link="http://www.stackoverflow.com";
-		var imageLink="https://www.google.com/s2/favicons?domain="+ link;
+		var imageLink="http://fvicon.com/"+link+"?canAudit=false&format=png&filter=apple-touch-icon";
 		$(".left-container").html("<img width='48' src='"+imageLink+"'>");
 	});
 
