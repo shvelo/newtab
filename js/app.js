@@ -73,10 +73,27 @@
 		$(".container").toggleClass("right");
 	});
 	$("#add").click(function(){
-		var link="http://www.stackoverflow.com";
-		var imageLink="https://www.google.com/s2/favicons?domain="+ link;
-		$(".left-container").html("<img width='48' src='"+imageLink+"'>");
+		
 	});
+		//get Gmail New Mail count//
+	/*
+	$.ajax({
+	url: "https://mail.google.com/mail/feed/atom",
+			dataType: "xml",
+			complete: function(data) {
+				var newMailCount=data.responseText.split("<fullcount>")[1].split("</fullcount>")[0];
+				console.log(newMailCount);
+				}
+		});
+	*/
+	// end of gmail new mail count//
+	
+	//get favicon from link//
+	/*var link="http://www.stackoverflow.com";
+		var imageLink="https://www.google.com/s2/favicons?domain="+ link;
+		$(".left-container").html("<img width='48' src='"+imageLink+"'>");*/
+	//end of favicon get//
+	
 
 	$(".container").click(function(e){
 		if($(".container").position().left>0)
