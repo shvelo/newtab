@@ -83,10 +83,15 @@
 			dataType: "xml",
 			complete: function(data) {
 				var newMailCount=data.responseText.split("<fullcount>")[1].split("</fullcount>")[0];
-				console.log(newMailCount);
+				$(".mail-count").text(newMailCount);
 			}
 		});
 	}
+	getMailCount();
+
+	$(".gmail").click(function(){
+		location.href = "https://mail.google.com";
+	})
 
 	var getDribbbleShots = function() {
 		$.ajax({

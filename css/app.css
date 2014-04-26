@@ -110,12 +110,16 @@ ul {
   padding-left: .5em;
 }
 
+.launcher li {
+  position: relative;
+}
+
 .launcher li, .apps li {
   cursor: pointer;
   margin-bottom: .5em;
 }
 
-.launcher span {
+.launcher .title {
   opacity: 0;
   display: inline-block;
   transition: .5s;
@@ -132,6 +136,22 @@ ul {
   font-size: 2em;
   color: rgba(255,255,255,.93);
   vertical-align: middle;
+}
+
+.launcher .badge {
+  display: inline-block;
+  position: absolute;
+  top: 1.7em;
+  left: 2em;
+  background: rgb(243, 91, 91);
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  vertical-align: middle;
+  font-size: .8em;
+  line-height: 1em;
+  overflow: hidden;
 }
 
 .apps {
