@@ -93,6 +93,14 @@
 		location.href = "https://mail.google.com";
 	})
 
+	var loadShortcuts = function(){
+		if(chrome && chrome.storage && chrome.storage.sync) {
+			chrome.storage.sync.get("shortcuts", function(data) {
+		    console.log(data);
+		  });
+		}
+	}
+
 	var getDribbbleShots = function() {
 		$.ajax({
 			dataType: "jsonp",

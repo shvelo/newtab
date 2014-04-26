@@ -249,3 +249,24 @@ ul {
 .left-tab.active {
   display: block;
 }
+
+.left-container input, .left-container button {
+  display: block;
+  width: 100%;
+  padding: .5em;
+  font-size: 1.2em;
+  margin-bottom: .5em;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,.9);
+  color: #2d2d2d;
+  transition: .5s; 
+}
+
+.left-container button {
+  cursor: pointer;
+}
+
+.left-container input:hover, .left-container input:focus, .left-container button:hover {
+  background: white;
+}
