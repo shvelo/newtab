@@ -75,7 +75,7 @@
 
 	var getFavicon = function(link){
 		return "http://fvicon.com/"+link+"?canAudit=false&format=png&filter=apple-touch-icon";
-	});
+	};
 	
 	var getMailCount = function() {
 		$.ajax({
