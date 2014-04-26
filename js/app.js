@@ -66,7 +66,7 @@
 
 	getTrending();
 
-	$(".toggle-apps").click(function(){
+	$(".toggle-apps,.add-shortcut").click(function(){
 		$(".container").toggleClass("left");
 	});
 	$(".apps li").click(function(){
@@ -108,9 +108,18 @@
 			$(".container").removeClass("left");
 		else if($(".container").position().left<0)
 				$(".container").removeClass("right");
-		
 	});
 	
+	$(".toggle-apps").click(function(){
+		$(".left-tab").removeClass("active");
+		$(".tab-applist").addClass("active");
+	});
+
+	$(".add-shortcut").click(function(){
+		$(".left-tab").removeClass("active");
+		$(".tab-add").addClass("active");
+	});
+
 	updateTimeString();
 	setInterval(updateTimeString,1000);
 	updateDateString();

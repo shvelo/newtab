@@ -216,3 +216,16 @@ ul {
     border-radius: 0;
     background: rgba(255,255,255,0.3); 
 }
+
+.left-container h1 {
+  padding: 0.5em;
+  margin: 0;
+}
+
+.left-tab {
+  display: none;
+}
+
+.left-tab.active {
+  display: block;
+}
