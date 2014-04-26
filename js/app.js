@@ -96,10 +96,17 @@
 	var loadShortcuts = function(){
 		if(chrome && chrome.storage && chrome.storage.sync) {
 			chrome.storage.sync.get("shortcuts", function(data) {
-		    console.log(data);
+		    for(i in data.shortcuts) {
+		    	$(".add-shortcut").before(
+		    		"<li><a href='"+ data.shortcuts[i].url + "'><i class='fa fa-globe'></i>"
+		    		+"<span class=title>" + data.shortcuts[i].title +"</span></li>"
+		    	);
+		    }
 		  });
 		}
 	}
+
+	loadShortcuts();
 
 	var getDribbbleShots = function() {
 		$.ajax({
@@ -132,23 +139,21 @@
 		$(".left-tab").removeClass("active");
 		$(".tab-add").addClass("active");
 	});
+
 	$('#addBookmark').click(function(){
 		var url=($("#url").val());
 		var title=($("#title").val());
-		var arr1,arr2;
-		chrome.storage.sync.get("url", function(data) {
-			arr1=(data.url).split("|");
-			arr1.push(url);
-			chrome.storage.sync.set({"url": arr1.join("|")});
-		});
-		chrome.storage.sync.get("title", function(data) {
-			arr2=(data.title).split("|");
-			arr2.push(title);
-			chrome.storage.sync.set({"title": arr2.join("|")});
-		});
-		
-		console.log("added to bookmark");
+
+		if(chrome && chrome.storage && chrome.storage.sync) {
+			chrome.storage.sync.get("shortcuts", function(data) {
+				data = data.shortcuts;
+
+				data.push({url: url, title: title});
+		   	chrome.storage.sync.set({"shortcuts": data});
+		  });
+		}
 	});
+
 	$("#group").click(function(){
 		$(".container").toggleClass("left");
 		chrome.storage.sync.get("url", function(data) {

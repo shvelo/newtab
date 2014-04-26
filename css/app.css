@@ -126,8 +126,13 @@ ul {
   vertical-align: middle;
 }
 
-.launcher li:hover span {
+.launcher li:hover .title {
   opacity: 1;
+}
+
+.launcher a {
+  text-decoration: none;
+  color: white;
 }
 
 .launcher i {
